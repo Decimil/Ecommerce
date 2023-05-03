@@ -11,16 +11,15 @@ import {
 } from "@mui/icons-material";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
-import { Button, Space } from "antd";
+
 import React, { useState, useEffect, useLayoutEffect } from "react";
-import { CgWebsite } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../AuthContext";
 import { removeToken } from "../../helper";
-import { setToken } from "../../helper";
 import LogoutIcon from '@mui/icons-material/Logout';
 import Person2Icon from '@mui/icons-material/Person2';
-
+import Search from "../../search/Search";
+import Logo from "../../assets/logo192.png"
 
 const AppHeader = () => {
   const { user } = useAuthContext();
@@ -28,7 +27,7 @@ const AppHeader = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const  [isLogin, setLogin] = useState(false);
-  
+  const [searchModal, setSearchModal] = useState(false);
   useEffect(() => {if(localStorage.getItem('isLogin')){
     setLogin(true);
     
@@ -62,7 +61,7 @@ const AppHeader = () => {
       alignItems="center"
       width="100%"
       height="60px"
-      backgroundColor="rgba(255, 255, 255, 0.95)"
+      backgroundColor="rgba(255,255,255, 0.95)"
       color="black"
       position="fixed"
       top="0"
@@ -76,12 +75,17 @@ const AppHeader = () => {
         justifyContent="space-between"
         alignItems="center"
       >
+         
+
         <Box
           onClick={() => navigate("/")}
-          sx={{ "&:hover": { cursor: "pointer" } }}
+          sx={{ "&:hover": { cursor: "pointer" } , fontSize : "1.25rem"}}
           color={shades.secondary[500]}
         >
-          ECOMMERCE
+             
+
+               Shopify
+        
         </Box>
 
         
@@ -91,7 +95,8 @@ const AppHeader = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <IconButton sx={{ color: "black" }}>
+          <IconButton sx={{ color: "black" }}
+          onClick={() => setSearchModal(true)}>
             <SearchOutlined />
           </IconButton>
           <IconButton sx={{ color: "black" }}
@@ -133,14 +138,12 @@ const AppHeader = () => {
             <Person2Icon />
           </IconButton>
         </Box>
+        {searchModal && <Search setSearchModal={setSearchModal} />}
       </Box>
     </Box>
     
       );
     };
 
-
-
-  
 
 export default AppHeader;

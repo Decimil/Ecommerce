@@ -8,6 +8,7 @@ import Checkout from "./scenes/checkout/Checkout";
 import Confirmation from "./scenes/checkout/Confirmation";
 import AppHeader from "./scenes/global/AppHeader";
 import AppRoutes  from "./Routes";
+import AppContext from "./hooks/context";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -22,11 +23,13 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
+      <AppContext>
         <AppHeader />
         <ScrollToTop />
         <AppRoutes />
         <CartMenu />
         <Footer />
+        </AppContext>
       </BrowserRouter>
     </div>
   );

@@ -14,7 +14,7 @@ function Footer() {
 
 
   return (
-    <Box marginTop="70px" padding="40px 0" backgroundColor={neutral.light}>
+    <Box  padding="40px 0" backgroundColor={neutral.light}>
       <Box
         width="80%"
         margin="auto"
@@ -31,7 +31,7 @@ function Footer() {
             mb="30px"
             color={shades.secondary[500]}
           >
-            ECOMMERCE
+            SHOPIFY
           </Typography>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -8,7 +8,8 @@ import Confirmation from "./scenes/checkout/Confirmation";
 import ItemDetails from "./scenes/itemDetails/ItemDetails";
 import ContactUs from "./scenes/home/ContactUs";
 import Home from "./scenes/home/Home";
-import { getToken } from "./helper";
+import Category from "./Category/Category";
+
     
     const AppRoutes = () => {
       return (
@@ -21,6 +22,8 @@ import { getToken } from "./helper";
           <Route path="item/:itemId" element={<ItemDetails />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="checkout/success" element={<Confirmation />} />
+          <Route path="/category/:id" element={<Category />} />
+      
         </Routes>
       );
     };

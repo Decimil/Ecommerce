@@ -6,6 +6,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
 import { addToCart } from "../state";
 import { useNavigate } from "react-router-dom";
+import { Products } from "../Products/Products"
 
 const Item = ({ item, width }) => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const Item = ({ item, width }) => {
         },
       },
     },
-  } = image;
+ } = image;
 
   return (
     <Box width={width}>
@@ -84,7 +85,9 @@ const Item = ({ item, width }) => {
         <Typography>{name}</Typography>
         <Typography fontWeight="bold">Rs {price}</Typography>
       </Box>
+      
     </Box>
+    
   );
 };
 
