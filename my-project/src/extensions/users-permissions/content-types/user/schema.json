@@ -94,6 +94,12 @@
     "profile_slug": {
       "type": "uid",
       "targetField": "username"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "user"
     }
   }
 }

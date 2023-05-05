@@ -14,7 +14,7 @@ const Search = ({ setSearchModal }) => {
     };
 
     let { data } = useFetch(
-        `/api/products?populate=*&filters[name][$contains]=${query}`
+        `/api/items?populate=*&filters[name][$contains]=${query}`
     );
 
     if (!query.length) {
@@ -25,6 +25,7 @@ const Search = ({ setSearchModal }) => {
         <div className="search-modal">
             <div className="form-field">
                 <input
+                   
                     placeholder="Search"
                     value={query}
                     onChange={onChange}
@@ -44,9 +45,9 @@ const Search = ({ setSearchModal }) => {
                     {data?.data?.map((item) => (
                         <div
                             className="search-result-item"
-                            key={item.UID}
+                            key={item.id}
                             onClick={() => {
-                                navigate("/item/" + item.UID);
+                                navigate("/item/" + item.id);
                                 setSearchModal(false);
                             }}
                         >
@@ -56,7 +57,7 @@ const Search = ({ setSearchModal }) => {
                                     src={
                                         process.env
                                             .REACT_APP_STRIPE_APP_DEV_URL +
-                                        item.attributes.image.data[0].attributes
+                                        item.attributes.image.data.attributes
                                             .url
                                     }
                                 /> 
@@ -66,7 +67,7 @@ const Search = ({ setSearchModal }) => {
                                     {item.attributes.name}
                                 </span>
                                 <span className="desc">
-                                    {item.attributes.desc}
+                                    {item.attributes.shortDescription}
                                 </span>
                                 <span className="desc">
                                     {item.attributes.price}

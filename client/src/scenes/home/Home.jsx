@@ -24,7 +24,7 @@ useEffect(() => {
 }, []);
 
 const getProducts = () => {
-  fetchDataFromApi("/api/products?populate=*").then((res) => {
+  fetchDataFromApi("/api/items?populate=*").then((res) => {
       setProducts(res);
   });
 };

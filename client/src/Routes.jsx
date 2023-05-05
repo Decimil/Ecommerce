@@ -23,6 +23,7 @@ import Category from "./Category/Category";
           <Route path="checkout" element={<Checkout />} />
           <Route path="checkout/success" element={<Confirmation />} />
           <Route path="/category/:id" element={<Category />} />
+          
       
         </Routes>
       );

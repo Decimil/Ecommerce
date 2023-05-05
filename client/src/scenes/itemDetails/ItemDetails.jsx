@@ -73,7 +73,7 @@ const ItemDetails = () => {
         <Box flex="1 1 50%" mb="40px">
           <Box display="flex" justifyContent="space-between">
             <Box>Home/Item</Box>
-            <Box>Prev Next</Box>
+          
           </Box>
 
           <Box m="65px 0 25px 0">
@@ -115,8 +115,6 @@ const ItemDetails = () => {
           </Box>
           <Box>
             <Box m="20px 0 5px 0" display="flex">
-              <FavoriteBorderOutlinedIcon />
-              <Typography sx={{ ml: "5px" }}>ADD TO WISHLIST</Typography>
             </Box>
             <Typography>CATEGORIES: {item?.attributes?.category}</Typography>
           </Box>
@@ -134,7 +132,7 @@ const ItemDetails = () => {
         {value === "description" && (
           <div>{item?.attributes?.longDescription}</div>
         )}
-        {value === "reviews" && <div>reviews</div>}
+        {value === "reviews" && <div>Upcoming Feature</div>}
       </Box>
 
       {/* RELATED ITEMS */}

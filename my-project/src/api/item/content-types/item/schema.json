@@ -43,9 +43,11 @@
         "topRated"
       ]
     },
-    "UID": {
-      "type": "uid",
-      "targetField": "name"
+    "meanCategories": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "items"
     }
   }
 }

@@ -126,7 +126,7 @@ const Subscribe = () => {
         m="15px auto"
         display="flex"
         alignItems="center"
-        width="100%"
+        width="75%"
         backgroundColor="#F2F2F2"
         
       >

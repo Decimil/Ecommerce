@@ -24,35 +24,30 @@ function Footer() {
         rowGap="30px"
         columnGap="clamp(20px, 30px, 40px)"
       >
-        <Box width="clamp(20%, 30%, 40%)">
+        <Box width="clamp(50%, 30%, 40%)">
           <Typography
             variant="h4"
             fontWeight="bold"
             mb="30px"
             color={shades.secondary[500]}
           >
-            SHOPIFY
+            Shopify
           </Typography>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat
+          Lorem ipsum dolor sit amet consectetur adipiscing elit ad, himenaeos nunc mollis lectus at ac sociis 
+          vehicula eu, cursus bibendum congue ridiculus conubia rutrum netus. Dapibus mi rutrum quisque 
+          curabitur ligula nulla varius lacus vestibulum, litora primis parturient molestie netus velit
+           morbi placerat. Tempus nullam praesent primis curae pulvinar tincidunt per habitasse blandit 
+           felis sed hac, convallis dictum congue magna ad volutpat leo ac vehicula varius ante.
           </div>
         </Box>
 
-        <Box>
-          <Typography variant="h4" fontWeight="bold" mb="30px">
-            About Us
-          </Typography>
-          <Typography mb="30px">Careers</Typography>
-          <Typography mb="30px">Our Stores</Typography>
-          <Typography mb="30px">Terms & Conditions</Typography>
-          <Typography mb="30px">Privacy Policy</Typography>
-        </Box>
+       
 
         <Box>
-          <Typography variant="h4" fontWeight="bold" mb="30px">
+          <Typography variant="h4" fontWeight="bold" mb="30px"
+    
+            sx={{ textDecoration: 'none' }} onClick={contact}>
             Customer Care
           </Typography>
           <Typography mb="30px">Help Center</Typography>

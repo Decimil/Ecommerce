@@ -26,11 +26,11 @@
         "audios"
       ]
     },
-    "products": {
+    "items": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "categories"
+      "relation": "oneToMany",
+      "target": "api::item.item",
+      "mappedBy": "meanCategories"
     }
   }
 }

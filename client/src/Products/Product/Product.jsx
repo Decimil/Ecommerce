@@ -7,19 +7,19 @@ const Product = ({ data, id }) => {
     return (
         <div
             className="product-card"
-            onClick={() => navigate("/product/" + id)}
+            onClick={() => navigate("/item/" + id)}
         >
             <div className="thumbnail">
                 <img
                     src={
                         process.env.REACT_APP_STRIPE_APP_DEV_URL +
-                        data.img.data[0].attributes.url
+                        data.image.data.attributes.url
                     }
                 />
             </div>
             <div className="prod-details">
-                <span className="name">{data.title}</span>
-                <span className="price">&#8377;{data.price}</span>
+                <span className="name">{data.name}</span>
+                <span className="price">{data.price}</span>
             </div>
         </div>
     );
